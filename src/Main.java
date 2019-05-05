@@ -2,30 +2,27 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("liczby podzielne przez 3 lub 5 to:");
-
-        for (int i = 1; i < 100; i++)
-            if (zad1(i) != 0)
-                System.out.println(zad1(i));
-
-            System.out.println("nwd 14 i 20 to " + zad2(14,20));
-
-            System.out.println("5! = " + zad3(5));
-
-            System.out.println("8 wyraz ciagu fibonacciego to " + zad5(8));
-
-            int[] tab = new int[11];
-            int[] tab2;
+        int[] tab = new int[11];
 
         for (int i = 0; i < tab.length; i++)
             tab[i]=i+1;
 
-        tab2 = zad4(tab, 4);
 
-        for (int i = 0; i < tab2.length; i++)
-            System.out.print(tab2[i] + " ");
+        System.out.println("liczby podzielne przez 3 lub 5 to:");
 
+        for (int i = 1; i <= 100; i++)
+            if (zad1(i) != 0)
+                System.out.print(zad1(i) + " ");
 
+        System.out.println("\nnwd 14 i 20 to " + zad2(14,20));
+
+        System.out.println("5! = " + zad3(5));
+
+        zad4(tab, 3);
+
+        System.out.println("8 wyraz ciagu fibonacciego to " + zad5(8));
+
+        zad7(3,3);
 
     }
 
@@ -64,22 +61,27 @@ public class Main {
         return zad5(x-2) + zad5(x-1);
     }
 
-    public static int[] zad4 (int[] tab, int n){
+    public static void zad4 (int[] tab, int n){
 
         int[] tab2 = new int[tab.length];
 
         for (int i = 0; i < n; i++)
-            tab2[i]=tab[tab.length-n+i];
+            tab2[i] = tab[tab.length - n + i];
 
-
-        for (int i = 0; i < tab.length-n; i++){
+        for (int i = 0; i < tab.length-n; i++)
             tab2[i+n]=tab[i];
-        }
 
-//        for (int i = 0; i < 10; i++)
-//            System.out.println(tab2[i]);
+        for (int i = 0; i < tab.length; i++)
+            System.out.print(tab2[i] + " ");
 
-        return tab2;
+
+    }
+
+    public static void zad7 (int x, int y){
+
+        if ((x < 3) || (y < 3)) System.out.println("wymiary prostokata to conajmniej 3x3 - popraw!");
+
+
     }
 
 }
