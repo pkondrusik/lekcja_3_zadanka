@@ -16,13 +16,13 @@ public class Main {
 
         System.out.println("\nnwd 14 i 20 to " + zad2(14,20));
 
-        System.out.println("5! = " + zad3(5));
+        System.out.println("6! = " + zad3(6));
 
         zad4(tab, 3);
 
-        System.out.println("8 wyraz ciagu fibonacciego to " + zad5(8));
+        System.out.println("\n8 wyraz ciagu fibonacciego to " + zad5(8));
 
-        zad7(7,9);
+        zad7(6,9);
 
     }
 
