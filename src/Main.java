@@ -22,7 +22,7 @@ public class Main {
 
         System.out.println("8 wyraz ciagu fibonacciego to " + zad5(8));
 
-        zad7(3,3);
+        zad7(7,9);
 
     }
 
@@ -79,8 +79,26 @@ public class Main {
 
     public static void zad7 (int x, int y){
 
-        if ((x < 3) || (y < 3)) System.out.println("wymiary prostokata to conajmniej 3x3 - popraw!");
+        if ((x < 3) || (y < 3)){
+            System.out.println("wymiary prostokata to conajmniej 3x3 - popraw!");
+            return;
+        }
 
+        char[][] tab = new char[x][y];
+
+        for (int i = 0; i < x; i++)
+            for (int j = 0; j < y; j++){
+                tab[i][j] = ' ';
+                if ((i == 0) || (i == x-1)) tab[i][j]='#';
+                if ((j == 0) || (j == 0) || (j == y-1)) tab[i][j]='#';
+            }
+
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < y; j++) {
+                System.out.print(tab[i][j]);
+            }
+            System.out.println();
+        }
 
     }
 
