@@ -4,6 +4,8 @@ public class Main {
 
         int[] tab = new int[11];
 
+        int[] tab2 = new int[]{3,5,8,9,4,8,-3};
+
         for (int i = 0; i < tab.length; i++)
             tab[i]=i+1;
 
@@ -20,7 +22,9 @@ public class Main {
 
         zad4(tab, 3);
 
-        System.out.println("\n8 wyraz ciagu fibonacciego to " + zad5(8));
+        System.out.println("\n9 wyraz ciagu fibonacciego to " + zad5(9));
+
+        zad6(tab2);
 
         zad7(6,9);
 
@@ -54,12 +58,6 @@ public class Main {
         return wynik;
     }
 
-    public static int zad5 (int x){
-
-        if (x < 3) return 1;
-
-        return zad5(x-2) + zad5(x-1);
-    }
 
     public static void zad4 (int[] tab, int n){
 
@@ -74,6 +72,29 @@ public class Main {
         for (int i = 0; i < tab.length; i++)
             System.out.print(tab2[i] + " ");
 
+    }
+
+    public static int zad5 (int x){
+
+        if (x < 3) return 1;
+
+        return zad5(x-2) + zad5(x-1);
+    }
+
+
+    public static void zad6(int tab[]){
+
+        boolean czyJest = false;
+
+        for (int i = 0; i < tab.length; i++)
+            for (int j = i + 1; j < tab.length; j++)
+                if ((tab[i] + tab[j]) == 0) czyJest = true;
+
+        if (czyJest == true) System.out.println("sa dwie liczby gdzie ich suma to 0");
+        else System.out.println("nie ma liczb gdzie ich suma to 0");
+
+        for (int i = 0; i < tab.length; i++) System.out.print(tab[i] + " ");
+        System.out.println("--> " + czyJest);
 
     }
 
