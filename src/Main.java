@@ -16,7 +16,7 @@ public class Main {
             if (zad1(i) != 0)
                 System.out.print(zad1(i) + " ");
 
-        System.out.println("\nnwd 14 i 20 to " + zad2(14,20));
+        System.out.println("\nnwd 14 i 21 to " + zad2(14,21));
 
         System.out.println("6! = " + zad3(6));
 
@@ -66,7 +66,7 @@ public class Main {
         for (int i = 0; i < n; i++)
             tab2[i] = tab[tab.length - n + i];
 
-        for (int i = 0; i < tab.length-n; i++)
+        for (int i = 0; i < tab.length - n; i++)
             tab2[i+n]=tab[i];
 
         for (int i = 0; i < tab.length; i++)
@@ -93,12 +93,14 @@ public class Main {
         if (czyJest == true) System.out.println("sa dwie liczby gdzie ich suma to 0");
         else System.out.println("nie ma liczb gdzie ich suma to 0");
 
-        for (int i = 0; i < tab.length; i++) System.out.print(tab[i] + " ");
+        for (int i = 0; i < tab.length; i++)
+            System.out.print(tab[i] + " ");
+
         System.out.println("--> " + czyJest);
 
     }
 
-    public static void zad7 (int x, int y){
+    public static void zad7(int x, int y){
 
         if ((x < 3) || (y < 3)){
             System.out.println("wymiary prostokata to conajmniej 3x3 - popraw!");
@@ -111,13 +113,13 @@ public class Main {
             for (int j = 0; j < y; j++){
                 tab[i][j] = ' ';
                 if ((i == 0) || (i == x-1)) tab[i][j]='#';
-                if ((j == 0) || (j == 0) || (j == y-1)) tab[i][j]='#';
+                if ((j == 0) || (j == y-1)) tab[i][j]='#';
             }
 
         for (int i = 0; i < x; i++) {
-            for (int j = 0; j < y; j++) {
+            for (int j = 0; j < y; j++)
                 System.out.print(tab[i][j]);
-            }
+
             System.out.println();
         }
     }
